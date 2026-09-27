@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* ==========================================
+   NEW APS INTERIORS DESIGN TOKENS
+========================================== */
+
+@theme {
+  /* Brand */
+  --color-primary: #D2C0A6;
+  --color-primary-hover: #E2D4C0;
+
+  /* Backgrounds */
+  --color-background: #FAF8F5;
+  --color-surface: #FFFFFF;
+  --color-surface-light: #F6F3EF;
+
+  /* Text */
+  --color-text: #111111;
+  --color-text-muted: #666666;
+
+  /* Borders */
+  --color-border: #E7DED2;
+  --color-border-strong: #D8CCBC;
+
+  /* Radius */
+  --radius-card: 24px;
+  --radius-button: 999px;
+
+  /* Shadows */
+  --shadow-glow: 0 20px 60px rgba(210,192,166,.18);
+  --shadow-card: 0 20px 60px rgba(0,0,0,.08);
+}
+
+/* ==========================================
+   BASE
+========================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(210,192,166,.14),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(210,192,166,.08),
+      transparent 45%
+    ),
+    linear-gradient(
+      180deg,
+      #FAF8F5 0%,
+      #F8F6F3 60%,
+      #F4F1EC 100%
+    );
+
+  color: var(--color-text);
+
+  min-height: 100vh;
+}
+
+
+/* ==========================================
+   UTILITIES
+========================================== */
+
+@utility glass {
+  @apply border backdrop-blur-2xl;
+}
+
+
+@utility section-padding {
+  @apply py-28;
+}
+
+@utility container-padding {
+  @apply px-6 lg:px-8;
+}
